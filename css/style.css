@@ -13,11 +13,11 @@
     --color-anchor: #88bbff;
 
     --font-family: "Source Sans Pro", sans-serif;
-    --font-size-h1: 3rem;
-    --font-size-h2: 3rem;
-    --font-size-h3: 1.45rem;
-    --font-size-h4: 1.25rem;
-    --font-size-text: 1.2rem;
+    --font-size-h1: 3vw;
+    --font-size-h2: 3vw;
+    --font-size-h3: 1.45vw;
+    --font-size-h4: 1.25vw;
+    --font-size-text: 1.2vw;
     --font-family-headers: "Yaldevi", sans-serif;
     --border-radius: 8px;
 }
@@ -42,23 +42,27 @@ li a:active {
     color: yellow;
 }
 
-.row-photo {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
+.photo-gallery {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1vh;
+    justify-content: center;
 }
 
-/* Create four equal columns that sits next to each other */
-.column-photo {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
+.pet-info {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0.5em;
+    gap: 1em;
 }
 
-.column-photo img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+.pet-item-h2 {
+    font-size: 2vw;
+    grid-column: 1 / span 3;
+}
+
+.pet-item-h3 {
+    grid-column: 1 / span 4;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -164,7 +168,7 @@ aside a:not(.link-allstyles):focus,
 }
 
 header {
-    --logomark-height: 3em;
+    --logomark-height: 3vw;
     display: grid;
     min-height: 40vh;
     place-items: left;
@@ -232,7 +236,7 @@ nav ul a {
     display: inline-grid;
     padding: 0.6rem;
     color: var(--color-background);
-    font-size: 1.25rem;
+    font-size: 1.25vw;
     font-weight: bold;
     text-decoration: none;
 
@@ -252,18 +256,17 @@ nav ul a:focus {
 }
 
 nav ul li {
-    margin: 0 0.3rem;
+    margin: 0 0.3vw;
 }
 
 nav ul li a.current:link,
 a.current:visited {
     color: var(--color-tertiary);
-    font-size: 1.65em;
+    font-size: 1.65vw;
 }
 
 main {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding: 3vh;
 }
 
 main:focus {
