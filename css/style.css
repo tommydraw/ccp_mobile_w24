@@ -42,7 +42,7 @@ li a:active {
     color: yellow;
 }
 
-.pet-info {
+.info-grid {
     display: grid;
     grid-template-columns: auto auto;
     padding: 0.5em;
