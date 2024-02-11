@@ -13,11 +13,11 @@
     --color-anchor: #88bbff;
 
     --font-family: "Source Sans Pro", sans-serif;
-    --font-size-h1: 3vw;
-    --font-size-h2: 3vw;
-    --font-size-h3: 1.45vw;
-    --font-size-h4: 1.25vw;
-    --font-size-text: 1.2vw;
+    --font-size-h1: 2.5em;
+    --font-size-h2: 2em;
+    --font-size-h3: 1.8em;
+    --font-size-h4: 1.25em;
+    --font-size-text: 0.8em;
     --font-family-headers: "Yaldevi", sans-serif;
     --border-radius: 8px;
 }
@@ -42,42 +42,56 @@ li a:active {
     color: yellow;
 }
 
-.photo-gallery {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 1vh;
-    justify-content: center;
-}
-
 .pet-info {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     padding: 0.5em;
     gap: 1em;
 }
 
 .pet-item-h2 {
-    font-size: 2vw;
-    grid-column: 1 / span 3;
+    font-size: 2em;
+    grid-column: 1 / span 2;
 }
 
 .pet-item-h3 {
-    grid-column: 1 / span 4;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+.photo-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 2em;
+    padding-bottom: 1em;
+}
+
+.photo-column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.photo-column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
-    .column-photo {
-        flex: 50%;
-        max-width: 50%;
+    .photo-column {
+        flex: 20%;
+        max-width: 20%;
     }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-    .column-photo {
-        flex: 100%;
-        max-width: 100%;
+    .photo-column {
+        flex: 50%;
+        max-width: 50%;
+        max-height: 50%;
     }
 }
 
@@ -86,13 +100,14 @@ li a:active {
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
 */
-/* Box sizing rules */
+/* Box sizing rules 
 *,
 *::before,
 *::after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+*/
 
 /* Remove default margin */
 body,
@@ -111,22 +126,23 @@ html {
 
 /* Set core body defaults */
 body {
-    min-height: 100vh;
+    min-height: 100em;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
-    overflow-x: hidden;
+    overflow-x: scroll;
     background-color: var(--color-background);
     font-family: var(--font-family);
     font-size: var(--font-size-text);
     color: var(--color-text);
+    padding-right: 2em;
 }
 
-/* Make images easier to work with */
+/* Make images easier to work with 
 img {
     display: block;
     max-width: 100%;
 }
-
+*/
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -168,11 +184,11 @@ aside a:not(.link-allstyles):focus,
 }
 
 header {
-    --logomark-height: 3vw;
+    --logomark-height: 2em;
     display: grid;
-    min-height: 40vh;
+    min-height: 5em;
     place-items: left;
-    padding: 10vh 2.2rem;
+    padding: 5vh 2rem;
     background-color: var(--color-dark);
     text-align: left;
 }
@@ -236,7 +252,7 @@ nav ul a {
     display: inline-grid;
     padding: 0.6rem;
     color: var(--color-background);
-    font-size: 1.25vw;
+    font-size: 0.8em;
     font-weight: bold;
     text-decoration: none;
 
@@ -256,17 +272,17 @@ nav ul a:focus {
 }
 
 nav ul li {
-    margin: 0 0.3vw;
+    margin: 0 0.3em;
 }
 
 nav ul li a.current:link,
 a.current:visited {
     color: var(--color-tertiary);
-    font-size: 1.65vw;
+    font-size: 1.2em;
 }
 
 main {
-    padding: 3vh;
+    padding: 2em;
 }
 
 main:focus {
