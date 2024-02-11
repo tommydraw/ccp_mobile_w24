@@ -49,12 +49,12 @@ li a:active {
     gap: 1em;
 }
 
-.pet-item-h2 {
+.item-h2 {
     font-size: 2em;
     grid-column: 1 / span 2;
 }
 
-.pet-item-h3 {
+.item-h3 {
     text-decoration: underline;
     font-size: 1.2em;
 }
